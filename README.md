@@ -34,6 +34,11 @@ python main.py --load data/random.json --window 5
 
 # Экспорт в CSV
 python main.py --kind trend --n 30 --export out.csv
+# Сохранить только исходный ряд в CSV
+python main.py --kind trend --n 30 --export out.csv
+
+# Сохранить исходный ряд + SMA + EMA + CMA в один CSV
+python main.py --kind sine --n 20 --window 3 --save-csv results.csv
 ```
 
 ## Параметры CLI
@@ -48,6 +53,7 @@ python main.py --kind trend --n 30 --export out.csv
 | `--load PATH`    | загрузить ряд из файла                |
 | `--save PATH`    | сохранить ряд в JSON                  |
 | `--export FILE`  | экспорт в CSV                         |
+| `--save-csv FILE` | сохранить value + sma + ema + cma в CSV |
 
 ## Тесты
 
